@@ -1,7 +1,7 @@
 *{
     padding: 0;
     margin: 0;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
     box-sizing: border-box;/*  */
     font-family:Arial, Helvetica, sans-serif;
 }
@@ -11,6 +11,7 @@
     background-repeat: no-repeat;
     background-size: cover;*/
     background-color: #F9CED8;;
+    
      
 }
 /*navbar*/
@@ -18,7 +19,7 @@
 header{
     width: 100%;
     height: 90px;
-    padding: 8px 150px;
+    padding: 8px 15px;
     background-color: #F5DF4D ;
     display: flex;
     align-items: center;
@@ -33,22 +34,26 @@ nav{
 
 ul{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 23px;
-    
 }
 
-ul li{
+.logo img{
+    width: 100%;
+}
+
+ul li,ul{
     list-style: none;
 }
 
 a{
     text-decoration: none;
-    font-size: 20px;
+    font-size: clamp(6px,2vw,24px);
     color: #fff;
 }
 
 .nv{
+    width: 100%;
     background-color: #FE5CC7;
     border: 2px solid #FE5CC7 ;
     border-radius: 15px; 
@@ -68,11 +73,16 @@ a{
     justify-content: center;
     align-items: center;
     margin-top: 5%;
+    margin: 0 auto;
+    padding-top: 5%;
+    margin-bottom: 7%;
+    width: 100%;
     flex-direction: column;
 }
 
+
 .pic_girls{
-    width: 25%;
+    width: 30%;
     height: 175px;
     /*margin: 30px auto;*/
 }
@@ -82,7 +92,7 @@ a{
 .texte_home h1{
     color: black;
     font-family: gratina;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: bold;
 }
 
@@ -94,18 +104,26 @@ a{
     font-weight: bold;
     font-size: 20px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 10%;
+    text-align: center;
     /*margin-top: 40px;*/
 }
 footer{
     width: 100%;
-    height: 10%;
+    height: 100%;
     background-color: #F5DF4D;
     display: flex;
     align-items: center;
+   
     justify-content: center;
-    /*align-self: self-end;*/
-    padding: 2%;
-    margin-top: 90px;
+    /* align-self: self-end; */
+    padding: 2.2%;
+    position: static;
+    /*margin-top: 80px;*/
+}
+
+footer h3{
+    text-align: center;
 }
 
 /*page nouveauté*/
@@ -181,7 +199,7 @@ footer{
     display: flex;
     flex-direction: column;
     text-align: center;
-    justify-content: space-between;
+    gap: 10px;
 }
 
 .box img{
@@ -229,6 +247,7 @@ footer{
 .banner_contact{
     display: flex;
     justify-content: space-between;
+    margin-top: 2%;
 }
 .text_contact{
    display: flex;
@@ -238,9 +257,11 @@ footer{
 }
 .text_contact p{
     color: #FF1B1B;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
+    :*font-size: clamp(16px,4vw,40px);*/
 }
+
 .img_contact{
     width: 30%;
     height: 100%;
@@ -255,11 +276,12 @@ footer{
 .champ{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 500px;
     color: #000;
     gap: 30px;
     /* border: 1px solid red; */
-    padding-left: 30px;
-    gap: 35px;
 }
 
 /*champ input*/
@@ -267,9 +289,18 @@ footer{
 .champ input{
     color: #000;
     height: 50px;
-    width: 60vh;
+    width: 100%;
     border-radius: 15px;
     padding: 5px 15px;
+}
+
+.name{
+    display: flex;
+    width: 100%;
+    gap: 2%;
+}
+
+.name input{
 }
 /*text bolder au champ*/
 
@@ -278,16 +309,11 @@ footer{
     font-weight: bold;
 
 }
-.name{
-    display: flex;
-    gap: 40px;
-    width: 400px;
-    gap: 180px;
-}
 
 .Question{
     display: flex;
-    gap: 80px; 
+    width: 100%;
+    gap: 80px;
 }
 
 .Envoyer{
@@ -305,7 +331,7 @@ footer{
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    margin-top: 80px;
+    margin: 80px 0;
 }
 
 .playnow_contact{
@@ -329,8 +355,94 @@ footer{
 }
 
 @media screen and (max-width: 768px){
-    .ogo{
-        height: 12px;
-        width: 20px;
+    .texte_home{
+        gap: 5%;
+        width: 100%;
+        /* margin-bottom: 80%; */
+        height: 53vh;
     }
+
+    .texte_home h1{
+        font-size: 24px;
+        padding-left: 20px;
+
+    }
+
+    .pic_girls{
+        width: 100%;
+        /* height: 175px; */
+        /*margin: 30px auto;*/
+    }
+.play_now{
+    width: 35%;
+}
+
+    .banner{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .boutiques1 , .boutiques2{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .logo img{
+        width: 100%;
+        object-fit: contain;
+    }
+    .logo{
+        width: 120px;
+    }
+    a{
+        padding: 1px;
+    }
+    .banner_contact,.paragraphe1,.paragraphe2{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner_contact img{
+        width: 100%;
+        height: auto;
+    }
+
+    .text_contact{
+        padding: 0;
+    }
+
+    .text_contact p{
+        font-size: 15px;
+    }
+
+    .champ{
+        width: 90%;
+    }
+    .poki a{
+        width: 50%;
+    }
+    .text{
+        width: 100%;
+    }
+    .foto {
+        width: 100%;
+    }
+    .paragraphe1,.paragraphe2{
+        gap: 30px;
+        padding: 2%;
+    }
+    
+    footer{
+        width: 100%;
+        height: 10%;
+        overflow-x: hidden;
+        background-color: #F5DF4D;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: self-end;
+        padding: 2%;
+        position: static;
+        bottom:0;
+        margin-top: 45%;
+
 }
